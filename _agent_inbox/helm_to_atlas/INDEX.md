@@ -4,6 +4,7 @@
 
 | 日期 · 时刻 (CDT) | task_id | 文件 | 主题 |
 |---|---|---|---|
+| 2026-05-14 18:46 | cvs-helm-2026-05-14-027 | `2026-05-14_cvs022_023_024_combo.md` | **Phase 1 心脏 cvs-023 ✅** · cron_holiday_scan launchd 挂周一9am · cvs-022 部分 · cvs-024 blocked |
 | 2026-05-14 18:25 | cvs-helm-2026-05-14-026 | `2026-05-14_cvs021_mcp_agent.md` | **Phase 1 Step 2 done** · mcp-agent + 4 MCPs (aio/brave/github/fetch) · hello.py work |
 | 2026-05-14 18:12 | cvs-helm-2026-05-14-025 | `2026-05-14_cvs020_aio_sandbox.md` | **Phase 1 Step 1 done** · AIO Sandbox @ Mac mini · colima + sandbox container · MCP/VSCode/Jupyter 全跑 |
 | 2026-05-14 17:43 | cvs-helm-2026-05-14-024 | `2026-05-14_cvs022_3of6_done.md` | **cvs-022 派 6 sub-task · 3 done 3 defer** · hook + v2.1 SKILL + agent-inbox repo |

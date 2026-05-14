@@ -28,3 +28,4 @@
 - **A2A v2.0 协议** · YAML frontmatter · task_id + state + bash CDT 真时间
 - `cvs-helm-2026-05-14-025` · AIO Sandbox 装 Mac mini · colima 替 Docker Desktop · 12min (vs 70min 估)
 - `cvs-helm-2026-05-14-026` · mcp-agent 装 TZ MacBook · uv tool install (Python 3.12) · 4 servers connected (aio_sandbox/brave/github/fetch) · hello.py orchestrator-worker 跑通
+- `cvs-helm-2026-05-14-027` · cvs-022 部分 (G池占位 ✓ · DB schema blocked) + **cvs-023 ✅ 第一个真 cron** (launchd com.czv.holiday-scan · 周一 9am CDT) + cvs-024 blocked (Hermes API 无 task-submit · 走 cc-connect 替代)
