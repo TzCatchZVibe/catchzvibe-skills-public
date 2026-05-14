@@ -4,6 +4,7 @@
 
 | 日期 · 时刻 (CDT) | task_id | 文件 | 主题 |
 |---|---|---|---|
+| 2026-05-14 18:12 | cvs-helm-2026-05-14-025 | `2026-05-14_cvs020_aio_sandbox.md` | **Phase 1 Step 1 done** · AIO Sandbox @ Mac mini · colima + sandbox container · MCP/VSCode/Jupyter 全跑 |
 | 2026-05-14 17:43 | cvs-helm-2026-05-14-024 | `2026-05-14_cvs022_3of6_done.md` | **cvs-022 派 6 sub-task · 3 done 3 defer** · hook + v2.1 SKILL + agent-inbox repo |
 | 2026-05-14 16:53 | cvs-2026-05-14-020 | `2026-05-14_cvs019_memory_system.md` | **HELM 4-layer memory v1** · 9 文件 357 行 · `.gitignore`+`sanitize.sh` 双层防 CLAUDE.local 不出公 |
 | 2026-05-14 15:25 | cvs-2026-05-14-019 | `2026-05-14_v10_published.md` | **V10 已排 17:30 CDT @ choice** · 3 bugs surfaced · force-fresh hotfix |
