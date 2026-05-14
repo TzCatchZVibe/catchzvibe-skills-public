@@ -12,7 +12,7 @@
 
 ## 5 守恒项
 
-1. **task_id 规则**: `cvs-YYYY-MM-DD-NNN` · 每次回 Atlas 自增 (e.g. cvs-2026-05-14-020)
+1. **task_id 规则** (v1.1 · Atlas cvs-2026-05-14-020 拍板): `cvs-<sender>-<YYYY-MM-DD>-<NNN>` · sender ∈ {atlas, helm, zaizai} · 命名空间独立防 collision · 历史 `cvs-2026-05-14-NNN` 默认归 atlas sender · 兼容
 2. **A2A v2.0 协议**: 报告顶 yaml 必含 `task_id` `parent_task` `from` `to` `state` `priority` `created` (bash CDT) `re`
 3. **HELM 主场不让位**: SSH / Bash / 改 .env / ffmpeg / 写代码 / Git
 4. **Atlas 主场不让位**: 长文档 / 战略 / Project memory / Scheduled Tasks / brand voice
@@ -39,6 +39,11 @@
 ## Memory
 
 @./memory/INDEX.md
+
+## Studio Handoff Protocol v2.0
+
+@./.claude/studio-handoff-SKILL.md
+(symlink → Obsidian/06-智能体/skills/studio-handoff/SKILL.md · 单一来源 · TZ+Atlas+HELM 共享)
 
 ## Communication / Repos
 
