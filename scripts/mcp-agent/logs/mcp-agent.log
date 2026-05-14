@@ -1,0 +1,37 @@
+{"level":"INFO","timestamp":"2026-05-14T18:24:24.648213","namespace":"mcp_agent.core.context","message":"Configuring logger with level: info"}
+{"level":"INFO","timestamp":"2026-05-14T18:24:24.810543","namespace":"mcp_agent.hello_aio_sandbox","message":"Loading subagents from configuration..."}
+{"level":"INFO","timestamp":"2026-05-14T18:24:24.810679","namespace":"mcp_agent.hello_aio_sandbox","message":"Loaded subagents","data":{"data":{"count":3,"agents":["filesystem_helper","web_helper","sandbox_browser"]}}}
+{"level":"INFO","timestamp":"2026-05-14T18:24:24.810724","namespace":"mcp_agent.hello_aio_sandbox","message":"MCPApp initialized","data":{"data":{"progress_action":"Running","target":"hello_aio_sandbox","agent_name":"mcp_application_loop","session_id":"90d0ee1b-3d14-4a11-8c8f-9d96f81311ac"}}}
+{"level":"INFO","timestamp":"2026-05-14T18:24:24.815173","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"aio_sandbox: Up and running with a persistent connection!"}
+{"level":"INFO","timestamp":"2026-05-14T18:24:28.615264","namespace":"mcp_agent.mcp.mcp_aggregator.sandbox_browser","message":"Requesting tool call","data":{"data":{"progress_action":"Calling Tool","tool_name":"browser_navigate","server_name":"aio_sandbox","agent_name":"sandbox_browser"}}}
+{"level":"INFO","timestamp":"2026-05-14T18:24:31.925160","namespace":"mcp_agent.mcp.mcp_aggregator.sandbox_browser","message":"Last aggregator closing, shutting down all persistent connections..."}
+{"level":"INFO","timestamp":"2026-05-14T18:24:31.942228","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"aio_sandbox: Requesting shutdown..."}
+{"level":"INFO","timestamp":"2026-05-14T18:24:31.928731","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"Disconnecting all persistent server connections..."}
+{"level":"INFO","timestamp":"2026-05-14T18:24:32.143059","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"All persistent server connections signaled to disconnect."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:11.453220","namespace":"mcp_agent.core.context","message":"Configuring logger with level: info"}
+{"level":"INFO","timestamp":"2026-05-14T18:25:11.510223","namespace":"mcp_agent.multi_server_test","message":"Loading subagents from configuration..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:11.510312","namespace":"mcp_agent.multi_server_test","message":"Loaded subagents","data":{"data":{"count":3,"agents":["filesystem_helper","web_helper","sandbox_browser"]}}}
+{"level":"INFO","timestamp":"2026-05-14T18:25:11.510329","namespace":"mcp_agent.multi_server_test","message":"MCPApp initialized","data":{"data":{"progress_action":"Running","target":"multi_server_test","agent_name":"mcp_application_loop","session_id":"6811d9cd-0c94-47d6-a565-0cf7df78e01f"}}}
+{"level":"INFO","timestamp":"2026-05-14T18:25:11.513459","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"aio_sandbox: Up and running with a persistent connection!"}
+{"level":"INFO","timestamp":"2026-05-14T18:25:11.646097","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"Disconnecting all persistent server connections..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:11.645912","namespace":"mcp_agent.mcp.mcp_aggregator.test_aio_sandbox","message":"Last aggregator closing, shutting down all persistent connections..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:11.647548","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"aio_sandbox: Requesting shutdown..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:11.848695","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"All persistent server connections signaled to disconnect."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:12.350752","namespace":"mcp_agent.mcp.mcp_aggregator.test_aio_sandbox","message":"Connection manager successfully closed and removed from context"}
+{"level":"INFO","timestamp":"2026-05-14T18:25:12.353844","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"brave-search: Up and running with a persistent connection!"}
+{"level":"INFO","timestamp":"2026-05-14T18:25:14.837947","namespace":"mcp_agent.mcp.mcp_aggregator.test_brave_search","message":"Last aggregator closing, shutting down all persistent connections..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:14.838031","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"Disconnecting all persistent server connections..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:14.838513","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"brave-search: Requesting shutdown..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:15.039638","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"All persistent server connections signaled to disconnect."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:15.541517","namespace":"mcp_agent.mcp.mcp_aggregator.test_brave_search","message":"Connection manager successfully closed and removed from context"}
+{"level":"INFO","timestamp":"2026-05-14T18:25:15.544194","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"github: Up and running with a persistent connection!"}
+{"level":"INFO","timestamp":"2026-05-14T18:25:18.283875","namespace":"mcp_agent.mcp.mcp_aggregator.test_github","message":"Last aggregator closing, shutting down all persistent connections..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:18.283971","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"Disconnecting all persistent server connections..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:18.284479","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"github: Requesting shutdown..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:18.485608","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"All persistent server connections signaled to disconnect."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:18.987012","namespace":"mcp_agent.mcp.mcp_aggregator.test_github","message":"Connection manager successfully closed and removed from context"}
+{"level":"INFO","timestamp":"2026-05-14T18:25:18.988976","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"fetch: Up and running with a persistent connection!"}
+{"level":"INFO","timestamp":"2026-05-14T18:25:22.640301","namespace":"mcp_agent.mcp.mcp_aggregator.test_fetch","message":"Last aggregator closing, shutting down all persistent connections..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:22.640426","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"Disconnecting all persistent server connections..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:22.640993","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"fetch: Requesting shutdown..."}
+{"level":"INFO","timestamp":"2026-05-14T18:25:22.842120","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"All persistent server connections signaled to disconnect."}

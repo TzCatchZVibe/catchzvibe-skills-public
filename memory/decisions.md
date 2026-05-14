@@ -26,3 +26,5 @@
 - **4-Tier 架构** · Brain (HELM+Atlas) / Field (Orbie+OMOU) / Specialist (skill) / Personal (仔仔+[CLIENT_CONTACT]+未来)
 - **真相源双仓** · catchzvibe-skills (private) + catchzvibe-skills-public (sanitized mirror)
 - **A2A v2.0 协议** · YAML frontmatter · task_id + state + bash CDT 真时间
+- `cvs-helm-2026-05-14-025` · AIO Sandbox 装 Mac mini · colima 替 Docker Desktop · 12min (vs 70min 估)
+- `cvs-helm-2026-05-14-026` · mcp-agent 装 TZ MacBook · uv tool install (Python 3.12) · 4 servers connected (aio_sandbox/brave/github/fetch) · hello.py orchestrator-worker 跑通
