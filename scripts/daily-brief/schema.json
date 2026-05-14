@@ -1,0 +1,189 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/TzCatchZVibe/catchzvibe-skills/main/scripts/daily-brief/schema.json",
+  "title": "daily_brief_orbie_input",
+  "description": "Atlas 每日 8am Scheduled Task 拉的输入 · Orbie 7:50am 自动 push 到 catchzvibe-skills _agent_inbox · Atlas web_fetch 后生成 TZ 当日简报。规范来自 cvs-2026-05-14-013 dispatch。",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "generated_by", "data"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 with offset · Orbie 必须用 America/Chicago"
+    },
+    "generated_by": {
+      "type": "string",
+      "enum": ["orbie-mac-mini", "orbie-fallback-cache"]
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "lark_unread",
+        "kozed_g_pool_yesterday",
+        "hank_status",
+        "sarah_stream_this_week",
+        "scheduled_today",
+        "low_confidence_queue_count",
+        "weather_cache"
+      ],
+      "properties": {
+        "lark_unread": {
+          "type": "object",
+          "properties": {
+            "groups": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["name", "count", "last_msg_summary"],
+                "properties": {
+                  "name": {"type": "string", "examples": ["Studio - Hank", "HG - KOZED"]},
+                  "count": {"type": "integer", "minimum": 0},
+                  "last_msg_summary": {"type": "string", "maxLength": 200}
+                }
+              }
+            },
+            "direct_messages_count": {"type": "integer", "minimum": 0},
+            "high_priority_flagged": {
+              "type": "array",
+              "description": "启发式 · sender ∈ {Sarah, Victor, Bella, TZ-direct, Hank-blocker}",
+              "items": {
+                "type": "object",
+                "required": ["sender", "summary"],
+                "properties": {
+                  "sender": {"type": "string"},
+                  "summary": {"type": "string", "maxLength": 200}
+                }
+              }
+            }
+          },
+          "required": ["groups", "direct_messages_count", "high_priority_flagged"]
+        },
+        "kozed_g_pool_yesterday": {
+          "type": "object",
+          "description": "读 Obsidian KOZED 内容生产系统/池子/G池/<昨天日期>.md",
+          "required": ["new_entries", "summary"],
+          "properties": {
+            "new_entries": {"type": "integer", "minimum": 0},
+            "summary": {"type": "string", "maxLength": 500}
+          }
+        },
+        "hank_status": {
+          "type": "object",
+          "description": "读飞书 Studio - Hank 群 + 仔仔 evey-bridge 通信",
+          "required": ["in_progress_videos", "delivered_yesterday", "blockers"],
+          "properties": {
+            "in_progress_videos": {"type": "array", "items": {"type": "string"}},
+            "delivered_yesterday": {"type": "array", "items": {"type": "string"}},
+            "blockers": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "sarah_stream_this_week": {
+          "type": "object",
+          "description": "读 Obsidian 本周 Sarah/OpenClaw B 模式 sync 文件",
+          "required": ["new_pushes", "topics", "files_synced"],
+          "properties": {
+            "new_pushes": {"type": "integer", "minimum": 0},
+            "topics": {"type": "array", "items": {"type": "string"}},
+            "files_synced": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "scheduled_today": {
+          "type": "object",
+          "required": ["publish_slots", "shooting_today"],
+          "properties": {
+            "publish_slots": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["video", "account", "time_ct", "platform"],
+                "properties": {
+                  "video": {"type": "string", "pattern": "^V[0-9]+$"},
+                  "account": {"type": "string", "enum": ["choice", "snacks"]},
+                  "time_ct": {"type": "string", "pattern": "^([0-1][0-9]|2[0-3]):[0-5][0-9]$"},
+                  "platform": {"type": "string", "enum": ["tiktok", "instagram", "youtube", "twitter", "facebook", "rednote"]}
+                }
+              }
+            },
+            "shooting_today": {"type": "boolean"}
+          }
+        },
+        "low_confidence_queue_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "_agent_inbox/_low_confidence_queue.md 当前 pending 条数 · Atlas 8am brief surface 给 TZ"
+        },
+        "weather_cache": {
+          "type": "object",
+          "required": ["city", "temp_f", "condition", "fetched_at"],
+          "properties": {
+            "city": {"type": "string", "const": "Dallas"},
+            "temp_f": {"type": "integer"},
+            "condition": {"type": "string"},
+            "fetched_at": {"type": "string", "format": "date-time"}
+          }
+        }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "description": "任何子拉取失败的 error trace · Atlas 简报会标注降级 (cached / partial)",
+      "items": {
+        "type": "object",
+        "required": ["field", "error"],
+        "properties": {
+          "field": {"type": "string", "description": "失败的 data.<field> 路径"},
+          "error": {"type": "string", "description": "异常信息"},
+          "fallback": {"type": "string", "description": "用了什么 fallback (e.g. 'cached_5h_ago' / 'skipped')"}
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "schema_version": "1.0",
+      "generated_at": "2026-05-15T07:50:00-05:00",
+      "generated_by": "orbie-mac-mini",
+      "data": {
+        "lark_unread": {
+          "groups": [
+            {"name": "Studio - Hank", "count": 3, "last_msg_summary": "V12 剪好了 · 等审"},
+            {"name": "HG - KOZED", "count": 5, "last_msg_summary": "Sarah 推了母亲节后 6 月日历"}
+          ],
+          "direct_messages_count": 2,
+          "high_priority_flagged": [
+            {"sender": "Sarah", "summary": "新 skill 推送 · 本周关注品类"}
+          ]
+        },
+        "kozed_g_pool_yesterday": {"new_entries": 2, "summary": "V10 24h 数据 · V11 上线"},
+        "hank_status": {
+          "in_progress_videos": ["V12", "V13"],
+          "delivered_yesterday": ["V11"],
+          "blockers": []
+        },
+        "sarah_stream_this_week": {
+          "new_pushes": 1,
+          "topics": ["KOZED 母亲节后 · 6 月日历"],
+          "files_synced": ["sarah_calendar_jun_2026.md"]
+        },
+        "scheduled_today": {
+          "publish_slots": [
+            {"video": "V12", "account": "snacks", "time_ct": "13:00", "platform": "tiktok"}
+          ],
+          "shooting_today": false
+        },
+        "low_confidence_queue_count": 0,
+        "weather_cache": {
+          "city": "Dallas",
+          "temp_f": 78,
+          "condition": "partly cloudy",
+          "fetched_at": "2026-05-15T07:45:00-05:00"
+        }
+      },
+      "errors": []
+    }
+  ]
+}

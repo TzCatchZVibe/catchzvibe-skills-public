@@ -19,7 +19,7 @@ RULES = [
         "type": "blacklist",
         "patterns": [
             r"\bamazing\b", r"\bincredible\b", r"\brevolutionary\b",
-            r"\bbest\s+ever\b", r"\b100%\b", r"\bperfect\b",
+            r"\bbest\b[^.!?]*?\bever\b", r"\b100%\b", r"\bperfect\b",
             r"一定", r"绝对", r"最强", r"完美",
         ],
         "suggest": "用具体感官替代 · 比如 'tastes like real fruit' / '比苹果汁更甜一点'",
