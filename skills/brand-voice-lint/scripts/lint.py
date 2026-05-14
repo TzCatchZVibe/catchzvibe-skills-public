@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""brand-voice-lint · KOZED brand voice 6 规则 lint
+"""brand-voice-lint · [CLIENT] brand voice 6 规则 lint
 
 Usage:
     echo "text" | python3 lint.py
@@ -72,7 +72,7 @@ RULES = [
         "type": "conditional",
         "trigger": r"\bhalal\b",
         "must_pair": r"halal[\s-]?certified",
-        "suggest": "'halal' 必须配 'certified' · KOZED 是 Halal-certified 产品 · 写完整防误导",
+        "suggest": "'halal' 必须配 'certified' · [CLIENT] 是 Halal-certified 产品 · 写完整防误导",
     },
 ]
 

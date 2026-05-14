@@ -40,7 +40,7 @@
                 "type": "object",
                 "required": ["name", "count", "last_msg_summary"],
                 "properties": {
-                  "name": {"type": "string", "examples": ["Studio - Hank", "HG - KOZED"]},
+                  "name": {"type": "string", "examples": ["Studio - Hank", "HG - [CLIENT]"]},
                   "count": {"type": "integer", "minimum": 0},
                   "last_msg_summary": {"type": "string", "maxLength": 200}
                 }
@@ -49,7 +49,7 @@
             "direct_messages_count": {"type": "integer", "minimum": 0},
             "high_priority_flagged": {
               "type": "array",
-              "description": "启发式 · sender ∈ {Sarah, Victor, Bella, TZ-direct, Hank-blocker}",
+              "description": "启发式 · sender ∈ {[CLIENT_CONTACT], Victor, Bella, TZ-direct, Hank-blocker}",
               "items": {
                 "type": "object",
                 "required": ["sender", "summary"],
@@ -64,7 +64,7 @@
         },
         "kozed_g_pool_yesterday": {
           "type": "object",
-          "description": "读 Obsidian KOZED 内容生产系统/池子/G池/<昨天日期>.md",
+          "description": "读 Obsidian [CLIENT] 内容生产系统/池子/G池/<昨天日期>.md",
           "required": ["new_entries", "summary"],
           "properties": {
             "new_entries": {"type": "integer", "minimum": 0},
@@ -83,7 +83,7 @@
         },
         "sarah_stream_this_week": {
           "type": "object",
-          "description": "读 Obsidian 本周 Sarah/OpenClaw B 模式 sync 文件",
+          "description": "读 Obsidian 本周 [CLIENT_CONTACT]/[UPSTREAM_PLATFORM] B 模式 sync 文件",
           "required": ["new_pushes", "topics", "files_synced"],
           "properties": {
             "new_pushes": {"type": "integer", "minimum": 0},
@@ -151,11 +151,11 @@
         "lark_unread": {
           "groups": [
             {"name": "Studio - Hank", "count": 3, "last_msg_summary": "V12 剪好了 · 等审"},
-            {"name": "HG - KOZED", "count": 5, "last_msg_summary": "Sarah 推了母亲节后 6 月日历"}
+            {"name": "HG - [CLIENT]", "count": 5, "last_msg_summary": "[CLIENT_CONTACT] 推了母亲节后 6 月日历"}
           ],
           "direct_messages_count": 2,
           "high_priority_flagged": [
-            {"sender": "Sarah", "summary": "新 skill 推送 · 本周关注品类"}
+            {"sender": "[CLIENT_CONTACT]", "summary": "新 skill 推送 · 本周关注品类"}
           ]
         },
         "kozed_g_pool_yesterday": {"new_entries": 2, "summary": "V10 24h 数据 · V11 上线"},
@@ -166,7 +166,7 @@
         },
         "sarah_stream_this_week": {
           "new_pushes": 1,
-          "topics": ["KOZED 母亲节后 · 6 月日历"],
+          "topics": ["[CLIENT] 母亲节后 · 6 月日历"],
           "files_synced": ["sarah_calendar_jun_2026.md"]
         },
         "scheduled_today": {
