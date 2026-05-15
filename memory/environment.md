@@ -50,3 +50,19 @@
 
 - 仔仔 VPS: Hermes v0.13 · DeepSeek-v4-Pro · Brave search backend · Lark gateway
 - Mac mini: Hermes (version 同) · DeepSeek-v4-Pro · 18 个 evey plugins · claude-bridge (Helm ↔ OMOU)
+
+## 仔仔 VPS 工具栈 (cvs-029 v0.5 · 2026-05-14 装)
+
+- System: ffmpeg 6.1.1 · rclone 1.74.1 · gh 2.92.0
+- Python venv: `~/.hermes/tools/venv/` (moviepy 2.1.2 · duckduckgo-search)
+- Tools README: `~/.hermes/tools/README.md`
+- 资源约束: 978MB RAM / 11GB free disk · Manim 不装
+- 待 TZ 凭证: Lark MCP (open.feishu.cn endpoint for Hank) · iCloud WebDAV · GitHub PAT
+
+## cc-connect (cvs-028)
+
+- Binary: `/opt/homebrew/bin/cc-connect` v1.3.2
+- Config: `~/.cc-connect/config.toml` (Lark 国际版 endpoint = `https://open.larksuite.com`)
+- 项目: czv-helm · work_dir = `~/.claude-skills-repo`
+- Daemon 待装 (cc-connect daemon install · 等 Lark 凭证 ready)
+- 凭证: 等 TZ 从 [REDACTED_LARK_URL] 拿 app_id + app_secret

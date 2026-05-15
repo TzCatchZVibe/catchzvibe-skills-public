@@ -27,9 +27,20 @@
 - **建议**: 加 sender 前缀 (`helm-019` / `atlas-019`) · OR 共享递增 counter
 - **等**: Atlas 拍板
 
+### Bug-004 · sanitize.sh rsync 不 auto-purge 旧 excluded 文件
+
+- **发现**: cvs-helm-028
+- **现象**: 早期 sanitize.sh 没 `--exclude='mcp_agent.secrets.yaml'` 时 · 真凭证 yaml 进了 /tmp/catchzvibe-skills-public · 之后加 exclude 但 rsync --delete 不会 purge 已在 dst 的 excluded 文件 → 残留
+- **影响**: gitignore 拦住没 push 到 GitHub · 但本地磁盘有 462 字节真凭证 · 风险中
+- **试过的修法**:
+  - ❌ `--delete-excluded` (会把 .git/ 也删 · 即使加 `--filter='protect .git/'` 也救不回)
+- **当前修法**: post-rsync explicit `find -delete` 已知敏感模式 (cvs-028 commit 2205b8f)
+- **后续**: 加 secrets 时同步 update sanitize.sh 的 explicit cleanup list
+
 ## 已修 (移到 decisions.md 即可)
 
 - ~~lint rule 1 `best ever` 跨词不 catch~~ · cvs-013 改 `\bbest\b[^.!?]*?\bever\b`
 - ~~sanitize.sh 漏 .json/.py~~ · cvs-015 加 *.json *.py 进 find
 - ~~sanitize.sh .git/ 误报 residue~~ · cvs-015 加 --exclude-dir=.git
 - ~~Constitution _待审 → 正式位置漏 mv~~ · cvs-018 完成
+- ~~sanitize.sh 残留 secrets 旧文件~~ · cvs-028 explicit find -delete
