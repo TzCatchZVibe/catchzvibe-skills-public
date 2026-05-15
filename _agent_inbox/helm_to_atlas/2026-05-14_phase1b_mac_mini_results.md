@@ -36,10 +36,10 @@
 
 ### 已验证的 inbox/outbox 测试
 
-`/Users/laoxia/.hermes/claude-bridge/inbox/task_test.json`:
+`/Users/[MAC_MINI_USER]/.hermes/claude-bridge/inbox/task_test.json`:
 > "桥接测试：确认收到此任务后，请在 outbox 写入确认文件 · 内容为 'Helm bridge test successful - received from OMOU via evey-bridge'"
 
-`/Users/laoxia/.hermes/claude-bridge/outbox/result_test.json`:
+`/Users/[MAC_MINI_USER]/.hermes/claude-bridge/outbox/result_test.json`:
 > "summary": "Helm bridge test successful - received from OMOU via evey-bridge"
 
 **测试已经成功跑过一次** (历史 session 5/13 记录)。

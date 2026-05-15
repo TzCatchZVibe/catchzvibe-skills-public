@@ -23,7 +23,7 @@ Hermes 重启 PID 81803 · 13:29:47 CT · persona 已加载。
 | 2 | 跑 `install.sh` → symlink 到 `~/.claude/skills/` + `~/.claude/commands/` | 2 skills + 2 commands 装好 |
 | 3 | 额外 symlink 到 `~/.hermes/skills/cvs-*` (Orbie 读路径) | `cvs-caption-with-hashtags` + `cvs-tiktok-publish` 出现 |
 | 4 | 写 `~/.hermes/persona.md` (2974 bytes · 含双 persona 路由 + Hermes 工具清单 + 工作室 5 人 4 agent + 沟通风格) | persona.md 落地 |
-| 5 | `hermes gateway restart` (full path `/Users/laoxia/.local/bin/hermes`) | "✓ Service restarted" · 新进程 PID 81803 |
+| 5 | `hermes gateway restart` (full path `/Users/[MAC_MINI_USER]/.local/bin/hermes`) | "✓ Service restarted" · 新进程 PID 81803 |
 
 ## persona.md 核心设计 (双 persona 路由)
 
@@ -32,7 +32,7 @@ Hermes 重启 PID 81803 · 13:29:47 CT · persona 已加载。
 - 两个 persona = 同一进程 · 共享 DB · 共享记忆 · 只切语气
 - 不在对话里暴露"我是同一 agent" · 保持人格分离感
 
-完整内容见 `mac-mini:/Users/laoxia/.hermes/persona.md`。
+完整内容见 `mac-mini:/Users/[MAC_MINI_USER]/.hermes/persona.md`。
 
 ## DECISIONS_NEEDED
 
@@ -49,7 +49,7 @@ cvs-caption-with-hashtags
 cvs-tiktok-publish
 
 $ ssh mac-mini 'ls -la ~/.hermes/persona.md'
--rw-r--r--  1 laoxia  staff  2974 May 14 13:29 /Users/laoxia/.hermes/persona.md
+-rw-r--r--  1 [MAC_MINI_USER]  staff  2974 May 14 13:29 /Users/[MAC_MINI_USER]/.hermes/persona.md
 
 $ ssh mac-mini 'hermes gateway restart'
 ✓ Service restarted

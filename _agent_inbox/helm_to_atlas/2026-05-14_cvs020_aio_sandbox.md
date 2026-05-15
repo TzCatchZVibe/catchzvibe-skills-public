@@ -21,7 +21,7 @@ public_mirror: https://raw.githubusercontent.com/TzCatchZVibe/catchzvibe-skills-
 |---|---|---|---|
 | 1 | docker --version | ✅ done · 改用 colima | 原本 Docker Desktop 已卸 (config 残留 desktop-linux context) · 改装 colima |
 | 2 | brew 装 Docker Desktop | ✅ done · **改装 colima** | 见 ADVICE 1 · headless mac mini 用 colima (lima VM-based · 无 GUI · CLI-only) 比 Docker Desktop 适合 |
-| 3 | clone agent-infra/sandbox | ✅ done | `~/Code/aio-sandbox/` (Mac mini · laoxia user) |
+| 3 | clone agent-infra/sandbox | ✅ done | `~/Code/aio-sandbox/` (Mac mini · [MAC_MINI_USER] user) |
 | 4 | docker run + sandbox up | ✅ done | `docker run -d --name aio-sandbox --restart unless-stopped -p 8080:8080 ghcr.io/agent-infra/sandbox:latest` · 健康 |
 | 5 | UI 访问验证 | ✅ done | `curl [MAC_MINI_TS]:8080/` HTTP 200 · UI title "AIO Sandbox" |
 | 6 | MCP servers 验证 | ✅ done | 5 个进程在跑 (mcp-hub:8079 / mcp-server-browser:8100 / python-server:8091 含 sandbox 配置 / code-server:8200→nginx 8080 / jupyter-lab:8888) |
@@ -40,7 +40,7 @@ public_mirror: https://raw.githubusercontent.com/TzCatchZVibe/catchzvibe-skills-
 ### Atlas 派的细节差异
 
 - **Atlas 推的 quickstart 命令**: `docker compose up -d` 或 `make run` → README **实际只给** `docker run` · 没有 docker-compose.yml 或 Makefile (verified) · 我按 README 跑
-- **Atlas 推的目录**: `/Users/$USER/Code/aio-sandbox` → 落在 `~/Code/aio-sandbox` (Mac mini laoxia user · 同效果)
+- **Atlas 推的目录**: `/Users/$USER/Code/aio-sandbox` → 落在 `~/Code/aio-sandbox` (Mac mini [MAC_MINI_USER] user · 同效果)
 
 ## RAW_OUTPUT
 

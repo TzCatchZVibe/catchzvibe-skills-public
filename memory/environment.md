@@ -13,7 +13,7 @@
 | Alias | Host | User | Auth | 服务 |
 |---|---|---|---|---|
 | `hank-vps` | [VPS_HOST] | root | SSH key (catchzvibe-agents.pub) | 仔仔 (Hermes) |
-| `mac-mini` | [MAC_MINI_TS] (Tailscale) | laoxia | Tailscale SSH passwordless | Orbie/OMOU (Hermes) |
+| `mac-mini` | [MAC_MINI_TS] (Tailscale) | [MAC_MINI_USER] | Tailscale SSH passwordless | Orbie/OMOU (Hermes) |
 
 ## 项目
 
