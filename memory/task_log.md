@@ -21,7 +21,16 @@ cvs-2026-05-14-017  Atlas dispatch   Constitution signed + inline B/C
 cvs-2026-05-14-018  HELM  completed  立宪 + 3 Obsidian 文件落位 + V10 dispatch
 cvs-2026-05-14-019  HELM  completed  V10 published @ 17:30 CDT + 3 bugs surfaced + force-fresh hotfix
 cvs-2026-05-14-019  Atlas dispatch   HELM memory 系统 (duplicate ID · Atlas 派的 也叫 019)
-cvs-2026-05-14-020  HELM  completed  4-layer CLAUDE.md hierarchy + memory/ 子目录建立 (本任务)
+cvs-2026-05-14-020  HELM  completed  4-layer CLAUDE.md hierarchy + memory/ 子目录建立
+cvs-atlas-2026-05-14-020  Atlas dispatch   sender prefix v1.1 拍板 + Phase 1 派活
+cvs-helm-2026-05-14-021  HELM  completed  Atlas cvs-020 ANSWERS 落地 (sender prefix v1.1)
+cvs-atlas-2026-05-14-022  Atlas dispatch   Phase 1 心脏 (V10 入库 + cron 第一个 + Hermes 桥)
+cvs-atlas-2026-05-14-023  Atlas dispatch   cron 心脏 sub-task (launchd holiday-scan)
+cvs-atlas-2026-05-14-024  Atlas dispatch   cc-connect cvs-027 B 路线 dispatch
+cvs-helm-2026-05-14-025  HELM  completed  AIO Sandbox 装 Mac mini (colima · 12min)
+cvs-helm-2026-05-14-026  HELM  completed  mcp-agent 装 TZ MacBook (4 servers · 10min)
+cvs-helm-2026-05-14-027  HELM  partial    cvs-022 部分 + cvs-023 ✅ + cvs-024 blocked (28min combo)
+cvs-helm-2026-05-14-028  HELM  completed  cvs-027 B route base install ✅ (cc-connect 1.3.2 · 跑通)
 ```
 
 ## 注

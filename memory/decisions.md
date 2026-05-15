@@ -29,3 +29,13 @@
 - `cvs-helm-2026-05-14-025` · AIO Sandbox 装 Mac mini · colima 替 Docker Desktop · 12min (vs 70min 估)
 - `cvs-helm-2026-05-14-026` · mcp-agent 装 TZ MacBook · uv tool install (Python 3.12) · 4 servers connected (aio_sandbox/brave/github/fetch) · hello.py orchestrator-worker 跑通
 - `cvs-helm-2026-05-14-027` · cvs-022 部分 (G池占位 ✓ · DB schema blocked) + **cvs-023 ✅ 第一个真 cron** (launchd com.czv.holiday-scan · 周一 9am CDT) + cvs-024 blocked (Hermes API 无 task-submit · 走 cc-connect 替代)
+- `cvs-helm-2026-05-14-028` · cvs-027 B 路线 ✅ · cc-connect 1.3.2 base install · `~/.cc-connect/config.toml` (czv-main + claudecode + feishu stub) · `engine started` + `api server started` + `cc-connect is running projects=1` 验通 · stub `app_id is invalid` 是预期 · 飞书真凭证 5/15 (cvs-027.5)
+
+## cvs-027.5 v1.1 待做 (deferred 2026-05-15)
+
+- [ ] 建飞书自建应用 · 拿 app_id + app_secret · 替换 `~/.cc-connect/config.toml` 占位
+- [ ] 配 allow_from + admin_from (cc-connect WARN: 当前所有用户可触发 · privileged 命令 /shell /show /dir /restart /upgrade 默认 block)
+- [ ] 飞书 console 订阅 `card.action.trigger` event (interactive card mode 已开)
+- [ ] `cc-connect daemon install` 装 launchd · 后台常驻
+- [ ] 验证 Lark 群里 @bot 触发 claudecode agent
+- [ ] 写 cvs-027.5 完成报告
